@@ -1,35 +1,14 @@
-var btn = document.querySelectorAll(".key li"),
-input = document.querySelector(".input-valor"),
-perador = document.querySelectorAll(".operador");
+function tabuada(){
+    var num = parseInt(document.getElementById("num").value);
+    var resultado = document.getElementById('resposta');
+    var tabuada= '';
 
-for(var i = 0; i < btn.length; i++){
-    document.onkeypress = function(event){
-        for(var e = 0; e <= 10; e++){
-            if(key === (48+e)){
-                input.innerHTML += e;
-            }
-        }
-        switch(key){
-            case 42:
-            input.innerHTML += "*";
-            break;
-            case 43:
-                input.innerHTML += "+";
-                break
-                case 45:
-                    input.innerHTML += "-";
-                    break;
-                    case 46:
-                        input.innerHTML += ".";
-                        break;
-                        case 47:
-                            input.innerHTML += "/";
-                            break;
-                            case 13:
-                                case 61:
-                                    var equacao = input.innerHTML;
-        }
+
+    for(var count = 1; count <= 10; count ++){
+        tabuada += num+ "x" +count+ "="+
+        num*count+"<br/>";
+
+        resultado.innerHTML = tabuada;
+
     }
-
-
 }
